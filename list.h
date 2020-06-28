@@ -1,6 +1,9 @@
 #ifndef LIST_H
 #define LIST_H
 
+#define list_entry(ptr, type, member) \ 
+     ((type *)((char *)(ptr)-(unsigned long)(&((type *)0)->member)))
+
 struct list_head
 {
    struct list_head *prev,*next;
